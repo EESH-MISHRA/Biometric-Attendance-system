@@ -46,7 +46,7 @@ def video_feed(video_label, known_face_encodings, known_face_names, student_img_
             break
 
         # Resize the video frame for lower quality and smooth efficiency
-        small_frame = cv2.resize(video_frame, (0, 0), fx=0.5, fy=0.5)
+        small_frame = cv2.resize(video_frame,(100,100))
 
         frame_count += 1
         if frame_count % 2 != 0:  # skips every next frame for faster processing
@@ -80,7 +80,7 @@ def video_feed(video_label, known_face_encodings, known_face_names, student_img_
 # tkinter window
 app = ctk.CTk()
 app.iconbitmap("icon.ico")
-app.geometry("1200x600")
+app.geometry("800x600")
 app.title("Attendance System")
 
 # attendance dataframe format
